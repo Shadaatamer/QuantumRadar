@@ -16,15 +16,11 @@ public class Fine {
         return total;
     }
     public void print() {
-        System.out.println("Traffic");
-        System.out.println("for car " + plateNumber);
+        System.out.println("Traffic fine for car " + plateNumber);
         System.out.println("Total amount: " + getTotalAmount() + " EGP");
-        System.out.print("Violations:");
+        System.out.println("Violations:");
         for (Violation violation : violations) {
-            System.out.print(
-                    " - " + violation.description
-                            + " : " + violation.fee + " EGP"
-            );
+            System.out.println( " - " + violation.description + " : " + violation.fee + " EGP");
         }
         System.out.println();
     }
